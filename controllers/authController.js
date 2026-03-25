@@ -95,7 +95,7 @@ export const forgotPassword = async (req, res) => {
     await user.save();
 
     const resetLink =
-      `https://pwdreset-clients.netlify.app/change-password/${resetToken}`;
+      `http://localhost:5173/change-password/${resetToken}`;
 
     await transporter.sendMail({
       from: process.env.EMAIL,
